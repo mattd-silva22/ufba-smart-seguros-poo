@@ -115,6 +115,12 @@ main section {
   width: 100%;
 }
 
+.lists-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .list {
   width: 100%;
   padding: 15px;
@@ -122,6 +128,16 @@ main section {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.input-radio {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+}
+
+.with-border {
   border-top: 2px solid var(--color-blue);
 }
 
@@ -145,6 +161,7 @@ main section {
 .list-table-header p {
   width: 100%;
   font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .list-table-body {
@@ -160,6 +177,7 @@ main section {
 
 .list-table-row p {
   width: 100%;
+  font-size: 1.4rem;
 }
 
 .menu-toggle {
@@ -176,6 +194,15 @@ main section {
 
 .list-actions .edit-button {
   background-color: var(--color-dark-blue);
+}
+
+.divider {
+  height: 4px;
+  background-color: #242f91;
+}
+
+.contract-title {
+  font-size: 2.4rem !important;
 }
 
 button {
