@@ -1,73 +1,72 @@
 class User {
-    constructor(nome,genero,dataNacimento,email,dataRegistro,cep,tipo){
-        this._nomeUsuario = nome
-        this._generoUsuario = genero
-        this._dataNacimentoUsuario = dataNacimento
-        this._emailUsuario = email
-        this._dataRegistroUsuario = dataRegistro
-        this._cepUsuario = cep
-        this._tipoUsuario = tipo
-    }
+  constructor(nome, genero, dataNacimento, email, dataRegistro, cep, tipo) {
+    this._nomeUsuario = nome;
+    this._generoUsuario = genero;
+    this._dataNacimentoUsuario = dataNacimento;
+    this._emailUsuario = email;
+    this._dataRegistroUsuario = dataRegistro;
+    this._cepUsuario = cep;
+    this._tipoUsuario = tipo;
+  }
 
-    #metodos
+  #metodos;
 
-    //getters
-    get nomeUsuario() {
-        return this._nomeUsuario
-    }
+  //getters
+  get nomeUsuario() {
+    return this._nomeUsuario;
+  }
 
-    get generoUsuario() {
-        return this._generoUsuario
-    }
+  get generoUsuario() {
+    return this._generoUsuario;
+  }
 
-    get dataNacimentoUsuario(){
-        return this._dataNacimentoUsuario
-    }
-    
-    get emailUsuario(){
-        return this._emailUsuario
-    }
+  get dataNacimentoUsuario() {
+    return this._dataNacimentoUsuario;
+  }
 
-    get dataRegistroUsuario(){
-        return this._dataRegistroUsuario
-    }
+  get emailUsuario() {
+    return this._emailUsuario;
+  }
 
-    get cepUsuario() {
-        return this._cepUsuario
-    }
+  get dataRegistroUsuario() {
+    return this._dataRegistroUsuario;
+  }
 
-    get tipoUsuario() {
-        return this._tipoUsuario
-    }
+  get cepUsuario() {
+    return this._cepUsuario;
+  }
 
-    //setters
+  get tipoUsuario() {
+    return this._tipoUsuario;
+  }
 
-    set nomeUsuario(value) {
-        this._nomeUsuario = value
-    }
+  //setters
 
-    set generoUsuario(value) {
-        this._generoUsuario = value
-    }
+  set nomeUsuario(value) {
+    this._nomeUsuario = value;
+  }
 
-    set dataNacimentoUsuario(value) {
-        this._dataNacimentoUsuario = value
-    }
+  set generoUsuario(value) {
+    this._generoUsuario = value;
+  }
 
-    set emailUsuario(value) {
-        this._emailUsuario= value
-    }
- 
-    set dataRegistroUsuario(value) {
-        this._dataRegistroUsuario = value
-    }
+  set dataNacimentoUsuario(value) {
+    this._dataNacimentoUsuario = value;
+  }
 
-    set cepUsuario(value) {
-        this._cepUsuario = value
-    }
+  set emailUsuario(value) {
+    this._emailUsuario = value;
+  }
 
-    set tipoUsuario(value) {
-        this._tipoUsuario = value
-    }
+  set dataRegistroUsuario(value) {
+    this._dataRegistroUsuario = value;
+  }
 
+  set cepUsuario(value) {
+    this._cepUsuario = value;
+  }
+
+  set tipoUsuario(value) {
+    this._tipoUsuario = value;
+  }
 }

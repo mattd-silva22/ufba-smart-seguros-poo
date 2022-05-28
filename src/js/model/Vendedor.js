@@ -1,5 +1,3 @@
-class Vendedor{
-    constructor(){
-        
-    }
+class Vendedor extends User {
+  constructor() {}
 }
