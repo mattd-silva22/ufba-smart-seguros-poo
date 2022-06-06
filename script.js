@@ -1,8 +1,12 @@
+
+
 const aside = document.querySelector("aside");
 const mainSection = document.querySelector("#main-section");
 const checkboxMenu = document.querySelector("#checkbox-menu");
 const menuMobie = document.querySelector("#menu-mobile");
 const listsContainer = document.querySelector("#lists-container");
+const formArea = document.querySelector("#form-area")
+const formSelector = document.querySelector("#form-type-selector")
 
 const formLabels = [
   "Vendedores",
@@ -13,10 +17,11 @@ const formLabels = [
 ];
 
 const salersForm = `
-<form class="form-container">
+<form class="form-container" id="sales-form">
 <p class="title">Cadastro de vendedores</p>
-<input type="text" placeholder="Nome" />
-<input type="text" placeholder="Email" />
+<input type="text" placeholder="Nome"  id="client-name"/>
+<input type="text" placeholder="Email" id="client-email" />
+<input type="text" placeholder="Codigo Vendedor" />
 <p class="gender">Gênero</p>
 
 <div class="input-radio">
@@ -35,6 +40,36 @@ const salersForm = `
 </div>
 
 <input type="tel" placeholder="Telefone" />
+<button type="submit">Adcionar</button>
+</form>
+`;
+
+const clientForm = `
+<form class="form-container" id="client-form">
+<p class="title">Cadastro de Cliente</p>
+<input type="text" placeholder="Nome"  id="client-name"/>
+<input type="text" placeholder="Email" id="client-email" />
+<input type="text" placeholder="CPF" id="client-cpf" />
+<p class="gender">Gênero</p>
+
+<div class="input-radio">
+  <input type="radio" id="gender_male" value="gender_male" name="gender" />
+  <label for="gender_male">Masculino</label>
+</div>
+
+<div class="input-radio">
+  <input type="radio" id="gender_female" value="gender_female" name="gender" />
+  <label for="gender_female">Feminino</label>
+</div>
+
+<div class="input-radio">
+  <input type="radio" id="other" value="other" name="gender" />
+  <label for="other">Outro</label>
+</div>
+
+<input type="tel" placeholder="Telefone" id="tel-input"/>
+
+<button type="submit">Adcionar</button>
 </form>
 `;
 
@@ -124,16 +159,50 @@ const contratosList = `
 `;
 
 const LISTS = [clientList, salerslist, contratosList];
+  const formLafddfbels = [
+    "Vendedores",
+    "Clientes",
+    "Seguro de imóvel",
+    "Seguro de veículo",
+    "Seguro de celular",
+  ];
+function handleChangeFormEvent(label) {
+  function getForm(label) {
+    switch(label){
+
+      case "Vendedores":
+        return salersForm
+
+      case "Clientes":
+        return clientForm
+
+      case "Seguro de imóvel" :
+        return 
+
+      case "Seguro de veículo" :
+        return 
+
+
+      case "Seguro de celular" :
+        return 
+    }
+  }
+  
+  formArea.innerHTML = getForm(label)
+  return 
+}
 
 function populateAside() {
+  
   formLabels.forEach((label) => {
-    aside.innerHTML += `
-        <div class="aside-label-container">
-            <p>${label}</p>
-        </div>
-      `;
+    const asideLabel = document.createElement("div")
+    asideLabel.classList.add("aside-label-container")
+    asideLabel.addEventListener("click", ()=> handleChangeFormEvent(label))
+    asideLabel.innerHTML +=  `<p>${label}</p>`
+    formSelector.appendChild(asideLabel)
   });
-  aside.innerHTML += salersForm;
+
+  
 }
 
 function populateMain() {
@@ -146,3 +215,11 @@ checkboxMenu.addEventListener("change", () => {
 
 populateAside();
 populateMain();
+formArea.innerHTML = clientForm
+
+let clienteController = new ClienteController(
+  "#client-form","#client-name","#client-email",
+  "#client-cpf","#zap","#tel-input"
+  )
+console.log("foi")
+

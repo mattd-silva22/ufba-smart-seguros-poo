@@ -1,0 +1,23 @@
+{
+  "name": "smart-seguros-poo",
+  "version": "1.0.0",
+  "description": "projeto POO 2022",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattd-silva22/ufba-smart-seguros-poo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mattd-silva22/ufba-smart-seguros-poo/issues"
+  },
+  "homepage": "https://github.com/mattd-silva22/ufba-smart-seguros-poo#readme",
+  "dependencies": {
+    "nanoid": "^3.3.4",
+    "nedb": "^1.8.0"
+  }
+}
