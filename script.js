@@ -1,3 +1,5 @@
+import { ClienteController } from "./src/js/controller/ClienteController";
+
 const aside = document.querySelector("aside");
 const mainSection = document.querySelector("#main-section");
 const checkboxMenu = document.querySelector("#checkbox-menu");
@@ -15,7 +17,7 @@ const formLabels = [
 ];
 
 const salersForm = `
-<form class="form-container">
+<form class="form-container" id="sales-form">
 <p class="title">Cadastro de vendedores</p>
 <input type="text" placeholder="Nome"  id="client-name"/>
 <input type="text" placeholder="Email" id="client-email" />
@@ -38,15 +40,16 @@ const salersForm = `
 </div>
 
 <input type="tel" placeholder="Telefone" />
+<button type="submit">Adcionar</button>
 </form>
 `;
 
 const clientForm = `
-<form class="form-container">
+<form class="form-container" id="client-form">
 <p class="title">Cadastro de Cliente</p>
 <input type="text" placeholder="Nome"  id="client-name"/>
 <input type="text" placeholder="Email" id="client-email" />
-<input type="text" placeholder="Email" id="client-cpf" />
+<input type="text" placeholder="CPF" id="client-cpf" />
 <p class="gender">Gênero</p>
 
 <div class="input-radio">
@@ -64,7 +67,9 @@ const clientForm = `
   <label for="other">Outro</label>
 </div>
 
-<input type="tel" placeholder="Telefone" />
+<input type="tel" placeholder="Telefone" id="tel-input"/>
+
+<button type="submit">Adcionar</button>
 </form>
 `;
 
@@ -211,3 +216,10 @@ checkboxMenu.addEventListener("change", () => {
 populateAside();
 populateMain();
 formArea.innerHTML = salersForm
+
+let clienteController = new ClienteController(
+  "client-form","client-name","client-email",
+  "client-cpf","zap","tel-input"
+  )
+console.log("foi")
+

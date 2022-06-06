@@ -1,5 +1,0 @@
-class userCotroler {
-    constructor(formId){
-
-    }
-}
