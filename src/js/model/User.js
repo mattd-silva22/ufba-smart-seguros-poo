@@ -1,12 +1,11 @@
 class User {
-    constructor(nome,genero,dataNacimento,email,dataRegistro,cep,tipo){
+    constructor(nome,genero,email,dataRegistro,tipo,cpf){
         this._nomeUsuario = nome
         this._generoUsuario = genero
-        this._dataNacimentoUsuario = dataNacimento
         this._emailUsuario = email
         this._dataRegistroUsuario = dataRegistro
-        this._cepUsuario = cep
         this._tipoUsuario = tipo
+        this._cpfUsuario = cpf
     }
 
     #metodos
@@ -20,9 +19,6 @@ class User {
         return this._generoUsuario
     }
 
-    get dataNacimentoUsuario(){
-        return this._dataNacimentoUsuario
-    }
     
     get emailUsuario(){
         return this._emailUsuario
@@ -32,9 +28,7 @@ class User {
         return this._dataRegistroUsuario
     }
 
-    get cepUsuario() {
-        return this._cepUsuario
-    }
+
 
     get tipoUsuario() {
         return this._tipoUsuario
@@ -50,9 +44,6 @@ class User {
         this._generoUsuario = value
     }
 
-    set dataNacimentoUsuario(value) {
-        this._dataNacimentoUsuario = value
-    }
 
     set emailUsuario(value) {
         this._emailUsuario= value
@@ -62,12 +53,13 @@ class User {
         this._dataRegistroUsuario = value
     }
 
-    set cepUsuario(value) {
-        this._cepUsuario = value
-    }
-
     set tipoUsuario(value) {
         this._tipoUsuario = value
+    }
+
+    
+    set cpfUsuario(value) {
+        this._cpfUsuario = value
     }
 
 }

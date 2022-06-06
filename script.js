@@ -1,4 +1,4 @@
-import { ClienteController } from "./src/js/controller/ClienteController";
+
 
 const aside = document.querySelector("aside");
 const mainSection = document.querySelector("#main-section");
@@ -215,11 +215,11 @@ checkboxMenu.addEventListener("change", () => {
 
 populateAside();
 populateMain();
-formArea.innerHTML = salersForm
+formArea.innerHTML = clientForm
 
 let clienteController = new ClienteController(
-  "client-form","client-name","client-email",
-  "client-cpf","zap","tel-input"
+  "#client-form","#client-name","#client-email",
+  "#client-cpf","#zap","#tel-input"
   )
 console.log("foi")
 
