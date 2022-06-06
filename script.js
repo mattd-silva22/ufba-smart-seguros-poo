@@ -17,8 +17,8 @@ const formLabels = [
 const salersForm = `
 <form class="form-container">
 <p class="title">Cadastro de vendedores</p>
-<input type="text" placeholder="Nome" />
-<input type="text" placeholder="Email" />
+<input type="text" placeholder="Nome"  id="client-name"/>
+<input type="text" placeholder="Email" id="client-email" />
 <input type="text" placeholder="Codigo Vendedor" />
 <p class="gender">Gênero</p>
 
@@ -44,8 +44,9 @@ const salersForm = `
 const clientForm = `
 <form class="form-container">
 <p class="title">Cadastro de Cliente</p>
-<input type="text" placeholder="Nome" />
-<input type="text" placeholder="Email" />
+<input type="text" placeholder="Nome"  id="client-name"/>
+<input type="text" placeholder="Email" id="client-email" />
+<input type="text" placeholder="Email" id="client-cpf" />
 <p class="gender">Gênero</p>
 
 <div class="input-radio">
@@ -175,6 +176,7 @@ function handleChangeFormEvent(label) {
 
       case "Seguro de veículo" :
         return 
+
 
       case "Seguro de celular" :
         return 
