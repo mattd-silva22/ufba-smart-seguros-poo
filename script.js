@@ -37,7 +37,7 @@ const salersForm = `
   <label for="other">Outro</label>
 </div>
 
-<input type="tel" placeholder="Telefone" id="vendedor-telefone" />
+<input type="tel" placeholder="Telefone" id="vendedorTelefone" />
 <button type="submit">Adicionar</button>
 </form>
 `;
