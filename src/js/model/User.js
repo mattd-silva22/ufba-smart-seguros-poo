@@ -1,11 +1,11 @@
 class User {
-    constructor(nome,genero,email,dataRegistro,tipo,cpf){
+    constructor(nome,genero,email,dataRegistro,tipo){
         this._nomeUsuario = nome
         this._generoUsuario = genero
         this._emailUsuario = email
         this._dataRegistroUsuario = dataRegistro
         this._tipoUsuario = tipo
-        this._cpfUsuario = cpf
+        
     }
 
     #metodos
@@ -58,8 +58,6 @@ class User {
     }
 
     
-    set cpfUsuario(value) {
-        this._cpfUsuario = value
-    }
+  
 
 }

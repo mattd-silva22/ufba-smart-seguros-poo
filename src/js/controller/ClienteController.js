@@ -31,17 +31,17 @@
                 return
             }
 
-            if(cpf.trim() === "s" ) {
+            if(cpfInput.trim() === "" ) {
                 alert("CPF invalido")
                 return
             }
 
-            if(cpf.trim() === "t" ) {
+            if(cpfInput.trim() === "" ) {
                 alert("Telefone invalido")
                 return
             }
 
-            if(email.trim() === "t" ) {
+            if(emailInput.trim() === "" ) {
                 alert("Email invalido")
                 return
             }
@@ -57,9 +57,14 @@
 
             }
 
+            let client = new Cliente(
+                clientData.name,clientData.gender,clientData.email,
+                clientData.dataRegistro,clientData.userType,clientData.cpf
+                )
+
           
 
-            console.log(clientData)
+            console.log(client)
 
             this.clearForm()
         })
