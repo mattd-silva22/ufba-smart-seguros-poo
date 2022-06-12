@@ -1,5 +1,5 @@
 class ContratoSeguro{
-    constructor(){
+    constructor(nomeCliente,cpfCliente,nomeVendedor,codVendedor,item,valorContrato){
         
     }
 }

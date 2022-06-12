@@ -1,5 +1,5 @@
 class TelefoneCelular{
-    constructor(){
+    constructor(tipo,valor,ano,fabricante){
         
     }
 }

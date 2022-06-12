@@ -1,5 +1,5 @@
 class Veiculo{
-    constructor(){
+    constructor(tipo,ano,kilometragem,fabricante,placa,valor){
         
     }
 }
