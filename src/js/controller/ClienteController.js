@@ -59,7 +59,8 @@
 
             let client = new Cliente(
                 clientData.name,clientData.gender,clientData.email,
-                clientData.dataRegistro,clientData.userType,clientData.cpf
+                clientData.dataRegistro,clientData.userType,clientData.cpf,
+                clientData.tel
                 )
 
           
