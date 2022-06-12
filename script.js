@@ -155,7 +155,7 @@ const contratosList = `
     </div>
   </div>
 `;
-
+const formList = [salersForm,clientForm]
 const LISTS = [clientList, salerslist, contratosList];
 const formLafddfbels = [
   "Vendedores",
@@ -208,7 +208,7 @@ checkboxMenu.addEventListener("change", () => {
 
 populateAside();
 populateMain();
-formArea.innerHTML = clientForm;
+formList.forEach(form => formArea.innerHTML += form);
 
 let clienteController = new ClienteController(
   "#client-form",
