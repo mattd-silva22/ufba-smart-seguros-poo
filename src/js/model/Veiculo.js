@@ -1,4 +1,4 @@
-class Veiculo{
+export class Veiculo{
     constructor(tipo,ano,kilometragem,fabricante,placa,valor){
         
     }

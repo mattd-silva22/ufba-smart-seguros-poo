@@ -1,4 +1,4 @@
-class VendedorController {
+export class VendedorController {
   constructor(
     vendedorFormId,
     vendedorName,

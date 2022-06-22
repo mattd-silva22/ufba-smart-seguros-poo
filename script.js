@@ -34,10 +34,16 @@ const formLafddfbels = [
 function handleChangeFormEvent(label) {
   if(label === "Vendedores") {
     salesFormEl.classList.toggle("form-disable")
+    clientFormEl.classList.toggle("form-disable")
   }
 
   if( label === "Clientes") {
     clientFormEl.classList.toggle("form-disable")
+    salesFormEl.classList.toggle("form-disable")
+  }
+
+  if( label === "Seguro de imóvel") {
+    
   }
   
 }
@@ -62,12 +68,5 @@ populateAside();
 
 
 
-let clienteController = new ClienteController(
-  "#client-form",
-  "#client-name",
-  "#client-email",
-  "#client-cpf",
-  "#zap",
-  "#tel-input"
-);
+gt
 console.log("foi");
