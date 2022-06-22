@@ -1,4 +1,4 @@
-class ContratoSeguro{
+export class ContratoSeguro{
     constructor(nomeCliente,cpfCliente,nomeVendedor,codVendedor,item,valorContrato){
         
     }

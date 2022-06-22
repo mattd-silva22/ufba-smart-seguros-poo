@@ -1,4 +1,4 @@
- class ClienteController {
+export class ClienteController {
     constructor(clientFormId,clientNameInputId,clientEmailInputId,
                 clientCpfInputId,clientGenderId,clientTelInputId
                 ){

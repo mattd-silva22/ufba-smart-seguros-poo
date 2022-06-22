@@ -1,4 +1,4 @@
-class Imovel{
+export class Imovel{
     constructor(valor,area,endereço,tipo){
         this.valor = valor
         this.area = area
