@@ -1,6 +1,6 @@
-export class ClienteController {
+class ClienteController {
     constructor(clientFormId,clientNameInputId,clientEmailInputId,
-                clientCpfInputId,clientGenderId,clientTelInputId
+                clientCpfInputId,clientGenderId,clientTelInputId,database
                 ){
         this.clientFormEl = document.querySelector(clientFormId)
         this.clientNameInputEl =  document.querySelector(clientNameInputId)
@@ -8,6 +8,7 @@ export class ClienteController {
         this.clientCpfInputEl = document.querySelector(clientCpfInputId)
         this.clientGenderInputEl = document.querySelector(clientGenderId)
         this.clientTelInputEl = document.querySelector(clientTelInputId)
+        this.database = database
         
         this.onSubmit()
     }
@@ -65,10 +66,14 @@ export class ClienteController {
 
           
 
-            console.log(client)
+            this.addClientToList(client)
 
             this.clearForm()
         })
+    }
+
+    addClientToList(client) {
+        this.database.addCliente(client)
     }
 
     clearForm() {

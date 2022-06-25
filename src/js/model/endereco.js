@@ -1,4 +1,4 @@
-export class endereço {
+class endereço {
     constructor(rua,numero,cep,complemento,cidade,estado){
         this.rua = rua
         this.numero = numero
