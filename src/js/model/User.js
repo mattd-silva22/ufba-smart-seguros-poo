@@ -1,4 +1,4 @@
-export class User {
+class User {
     constructor(nome,genero,email,dataRegistro,tipo){
         this._nomeUsuario = nome
         this._generoUsuario = genero

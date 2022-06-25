@@ -1,4 +1,4 @@
-export class Cliente extends User {
+class Cliente extends User {
     constructor(nome,genero,email,dataRegistro,tipo,cpf,telefone){
         super(nome,genero,email,dataRegistro,tipo)
         this._cpf = cpf
