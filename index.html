@@ -187,7 +187,7 @@
       </aside>
       <section id="main-section">
         <div id="lists-container" class="lists-container">
-          <div class="list with-border">
+          <div class="list with-border" id="lista-cliente">
             <p class="list-title">Lista de Clientes</p>
             <div class="list-table">
               <div class="list-table-header">
@@ -197,7 +197,7 @@
                 <p>Telefone</p>
                 <p>Ações</p>
               </div>
-              <div class="list-table-body" id="list-table-body">
+              <div class="list-table-body lista-cliente" id="list-table-body">
                 <div class="list-table-row">
                   <p><img src="./assets/Group 6.svg" alt="user photo" /></p>
                   <p>Fulano</p>
@@ -213,7 +213,7 @@
           </div>
 
           <div class="list with-border">
-            <p class="list-title">Lista de Vendedores</p>
+            <p class="list-title" id="lista-vendedores">Lista de Vendedores</p>
             <div class="list-table">
               <div class="list-table-header">
                 <p></p>
@@ -222,7 +222,7 @@
                 <p>Vendas</p>
                 <p>Ações</p>
               </div>
-              <div class="list-table-body" id="list-table-body">
+              <div class="list-table-body lista-vendedores" id="list-table-body">
                 <div class="list-table-row">
                   <p><img src="./assets/Group 6.svg" alt="user photo" /></p>
                   <p>Fulano</p>
@@ -273,6 +273,7 @@
     <script src="./src/js/model/Cliente.js"></script>r
     <script src="./src/js/view/FormView.js"></script>
     <script src="./src/js/controller/ClienteController.js"></script>
+    <script src="./src/js/controller/ListController.js"></script>
     <script src="./src/js/main.js"></script>
     
   </body>
