@@ -12,16 +12,19 @@ class Db {
                         userType : "client"
                     }
                 ]
+        this.vendedorList
     }
 
     addCliente(client) {
        let newlist = this.clientList.concat(client)
        this.clientList = newlist
-       console.log(this.clientList)
+      
     }
 
     addVendedor(vendedor) {
-
+        let newlist = this.clientList.concat(vendedor)
+        this.vendedorList = newlist
+        
     }
 
     

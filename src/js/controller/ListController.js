@@ -10,8 +10,8 @@ class ListController {
         divEl.innerHTML = `
             <p><img src="./assets/Group 6.svg" alt="user photo" /></p>
             <p>${client.nomeUsuario}</p>
-            <p>fulano@smart.com.br</p>
-            <p>(71) 99999-0000</p>
+            <p>${client.emailUsuario}</p>
+            <p>${client.telefone}</p>
             <p class="list-actions">
             <button class="edit-button">Editar</button>
             <button>Excluir</button>
@@ -19,5 +19,9 @@ class ListController {
         `
 
         this.ClientListEl.appendChild(divEl)
+    }
+
+    addVendedor(vendedor){
+        
     }
 }
