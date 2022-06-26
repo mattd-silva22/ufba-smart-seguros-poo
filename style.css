@@ -296,3 +296,11 @@ button {
     transform: none;
   }
 }
+
+.form-active {
+  display: flex;
+}
+
+.form-disable {
+  display: none;
+}

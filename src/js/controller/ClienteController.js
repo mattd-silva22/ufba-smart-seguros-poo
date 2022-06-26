@@ -1,6 +1,6 @@
- class ClienteController {
+class ClienteController {
     constructor(clientFormId,clientNameInputId,clientEmailInputId,
-                clientCpfInputId,clientGenderId,clientTelInputId
+                clientCpfInputId,clientGenderId,clientTelInputId,database
                 ){
         this.clientFormEl = document.querySelector(clientFormId)
         this.clientNameInputEl =  document.querySelector(clientNameInputId)
@@ -8,6 +8,7 @@
         this.clientCpfInputEl = document.querySelector(clientCpfInputId)
         this.clientGenderInputEl = document.querySelector(clientGenderId)
         this.clientTelInputEl = document.querySelector(clientTelInputId)
+        this.database = database
         
         this.onSubmit()
     }
@@ -31,17 +32,17 @@
                 return
             }
 
-            if(cpf.trim() === "s" ) {
+            if(cpfInput.trim() === "" ) {
                 alert("CPF invalido")
                 return
             }
 
-            if(cpf.trim() === "t" ) {
+            if(cpfInput.trim() === "" ) {
                 alert("Telefone invalido")
                 return
             }
 
-            if(email.trim() === "t" ) {
+            if(emailInput.trim() === "" ) {
                 alert("Email invalido")
                 return
             }
@@ -57,12 +58,22 @@
 
             }
 
+            let client = new Cliente(
+                clientData.name,clientData.gender,clientData.email,
+                clientData.dataRegistro,clientData.userType,clientData.cpf,
+                clientData.tel
+                )
+
           
 
-            console.log(clientData)
+            this.addClientToList(client)
 
             this.clearForm()
         })
+    }
+
+    addClientToList(client) {
+        this.database.addCliente(client)
     }
 
     clearForm() {
