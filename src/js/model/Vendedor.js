@@ -1,4 +1,4 @@
-export class Vendedor extends User {
+class Vendedor extends User {
   constructor(nome, genero, email, dataRegistro, tipo, codVendedor, telefone) {
     super(nome, genero, email, dataRegistro, tipo);
     this._codigoVendedor = codVendedor;

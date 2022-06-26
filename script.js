@@ -6,24 +6,10 @@ const listsContainer = document.querySelector("#lists-container");
 const formArea = document.querySelector("#form-area");
 const formSelector = document.querySelector("#form-type-selector");
 
-
 const clientFormEl = document.querySelector("#client-form")
 const salesFormEl = document.querySelector("#sales-form")
 
-
 const formLabels = [
-  "Vendedores",
-  "Clientes",
-  "Seguro de imóvel",
-  "Seguro de veículo",
-  "Seguro de celular",
-];
-
-
-
-
-
-const formLafddfbels = [
   "Vendedores",
   "Clientes",
   "Seguro de imóvel",
@@ -58,15 +44,8 @@ function populateAside() {
   });
 }
 
-
-
 checkboxMenu.addEventListener("change", () => {
   menuMobie.classList.toggle("inactive");
 });
 
 populateAside();
-
-
-
-gt
-console.log("foi");
