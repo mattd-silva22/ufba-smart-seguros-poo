@@ -9,16 +9,14 @@ class FormView {
 
     this.clientFormEl = document.querySelector("#client-form");
     this.salesFormEl = document.querySelector("#sales-form");
-    this.imovelFormEl = document.querySelector("#imovel-form");
-    this.veiculoFormEl = document.querySelector("#veiculo-form");
-    this.celularFormEl = document.querySelector("#celular-form");
+    this.seguroFormEl = document.querySelector("#imovel-form");
+
 
     this.formLabels = [
       "Vendedores",
       "Clientes",
-      "Seguro de imóvel",
-      "Seguro de veículo",
-      "Seguro de celular",
+      "Seguro",
+
     ];
 
     this.populateAside();
@@ -28,42 +26,24 @@ class FormView {
     if (label === "Vendedores") {
       this.salesFormEl.classList.remove("form-disable");
       this.clientFormEl.classList.add("form-disable");
-      this.veiculoFormEl.classList.add("form-disable");
-      this.celularFormEl.classList.add("form-disable");
-      this.imovelFormEl.classList.add("form-disable");
+      this.seguroFormEl.classList.add("form-disable");
+
     }
 
     if (label === "Clientes") {
       this.clientFormEl.classList.remove("form-disable");
       this.salesFormEl.classList.add("form-disable");
-      this.veiculoFormEl.classList.add("form-disable");
-      this.celularFormEl.classList.add("form-disable");
-      this.imovelFormEl.classList.add("form-disable");
+      this.seguroFormEl.classList.add("form-disable");
+
     }
 
-    if (label === "Seguro de imóvel") {
-      this.imovelFormEl.classList.remove("form-disable");
+    if (label === "Seguro") {
+      this.seguroFormEl.classList.remove("form-disable");
       this.salesFormEl.classList.add("form-disable");
       this.clientFormEl.classList.add("form-disable");
-      this.veiculoFormEl.classList.add("form-disable");
-      this.celularFormEl.classList.add("form-disable");
+
     }
 
-    if (label === "Seguro de veículo") {
-      this.imovelFormEl.classList.add("form-disable");
-      this.salesFormEl.classList.add("form-disable");
-      this.clientFormEl.classList.add("form-disable");
-      this.veiculoFormEl.classList.remove("form-disable");
-      this.celularFormEl.classList.add("form-disable");
-    }
-
-    if (label === "Seguro de celular") {
-      this.imovelFormEl.classList.add("form-disable");
-      this.salesFormEl.classList.add("form-disable");
-      this.clientFormEl.classList.add("form-disable");
-      this.veiculoFormEl.classList.add("form-disable");
-      this.celularFormEl.classList.remove("form-disable");
-    }
   }
 
   populateAside() {

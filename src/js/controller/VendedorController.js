@@ -31,11 +31,10 @@ class VendedorController {
       let telInput = this.vendedorTelInputEl.value;
       let genderInput = "";
 
-      /* if (
+      if (
         checkBlankFields([
           nameInput,
           emailInput,
-          cpfInput,
           telInput,
           codigoInput,
         ])
@@ -44,20 +43,7 @@ class VendedorController {
         return;
       }
 
-      if (!validateCPF(cpfInput)) {
-        alert("CPF invalido");
-        return;
-      }
-
-      if (!validateTel(telInput)) {
-        alert("Telefone invalido");
-        return;
-      }
-
-      if (!validateEmail(emailInput)) {
-        alert("Email invalido");
-        return;
-      } */
+      
 
       const date = new Date();
       const today =
@@ -99,6 +85,7 @@ class VendedorController {
     this.vendedorEmailInputEl.value = "";
     this.codigoVendedorInputEl.value = "";
     this.codigoVendedorInputEl.value = "";
+    this.vendedorTelInputEl.value = ""
   }
 }
 

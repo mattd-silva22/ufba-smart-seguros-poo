@@ -49,7 +49,7 @@
 
         <div id="form-area">
           <form class="form-container form-active" id="sales-form">
-            <p class="title">Cadastro de vendedores</p>
+            <p class="title">Cadastro de Vendedores</p>
             <input type="text" placeholder="Nome" id="vendedorName" />
             <input type="text" placeholder="Email" id="vendedorEmail" />
             <input
@@ -57,32 +57,8 @@
               placeholder="Codigo Vendedor"
               id="codigoVendedor"
             />
-            <p class="gender">Gênero</p>
+            
 
-            <div class="input-radio">
-              <input
-                type="radio"
-                id="gender_male"
-                value="gender_male"
-                name="gender"
-              />
-              <label for="gender_male">Masculino</label>
-            </div>
-
-            <div class="input-radio">
-              <input
-                type="radio"
-                id="gender_female"
-                value="gender_female"
-                name="gender"
-              />
-              <label for="gender_female">Feminino</label>
-            </div>
-
-            <div class="input-radio">
-              <input type="radio" id="other" value="other" name="gender" />
-              <label for="other">Outro</label>
-            </div>
 
             <input type="tel" placeholder="Telefone" id="vendedorTelefone" />
             <button type="submit">Adicionar</button>
@@ -94,32 +70,7 @@
           <input type="text" placeholder="Nome" id="client-name" />
           <input type="text" placeholder="Email" id="client-email" />
           <input type="text" placeholder="CPF" id="client-cpf" />
-          <p class="gender">Gênero</p>
-
-          <div class="input-radio">
-            <input
-              type="radio"
-              id="gender_male"
-              value="gender_male"
-              name="gender"
-            />
-            <label for="gender_male">Masculino</label>
-          </div>
-
-          <div class="input-radio">
-            <input
-              type="radio"
-              id="gender_female"
-              value="gender_female"
-              name="gender"
-            />
-            <label for="gender_female">Feminino</label>
-          </div>
-
-          <div class="input-radio">
-            <input type="radio" id="other" value="other" name="gender" />
-            <label for="other">Outro</label>
-          </div>
+        
 
           <input type="tel" placeholder="Telefone" id="tel-input" />
 
@@ -127,10 +78,10 @@
         </form>
 
         <form class="form-container form-disable" id="imovel-form">
-          <p class="title">Contrato Imovel</p>
-          <input type="text" placeholder="Email" id="client-email" />
-          <input type="text" placeholder="CPF" id="client-cpf" />
-          <p class="gender">Gênero</p>
+          <p class="title">Contrato Seguro</p>
+          <input type="text" placeholder="Nome Vendedor" id="vendedor-sale" />
+          <input type="text" placeholder="Nome Cliente" id="cliente-sale" />
+          <p class="gender">Tipo</p>
 
           <div class="input-radio">
             <input
@@ -139,7 +90,7 @@
               value="gender_male"
               name="gender"
             />
-            <label for="gender_male">Masculino</label>
+            <label for="gender_male">Veiculo</label>
           </div>
 
           <div class="input-radio">
@@ -149,90 +100,19 @@
               value="gender_female"
               name="gender"
             />
-            <label for="gender_female">Feminino</label>
+            <label for="gender_female">Imovel</label>
           </div>
 
           <div class="input-radio">
             <input type="radio" id="other" value="other" name="gender" />
-            <label for="other">Outro</label>
+            <label for="other">Celular</label>
           </div>
 
-          <input type="tel" placeholder="Telefone" id="tel-input" />
+          <input type="text" placeholder="Valor Item" id="cliente-sale" />
 
           <button type="submit">Adcionar</button>
         </form>
 
-        <form class="form-container form-disable" id="celular-form">
-          <p class="title">Contrato celular</p>
-          <input type="text" placeholder="Email" id="client-email" />
-          <input type="text" placeholder="CPF" id="client-cpf" />
-          <p class="gender">Gênero</p>
-
-          <div class="input-radio">
-            <input
-              type="radio"
-              id="gender_male"
-              value="gender_male"
-              name="gender"
-            />
-            <label for="gender_male">Masculino</label>
-          </div>
-
-          <div class="input-radio">
-            <input
-              type="radio"
-              id="gender_female"
-              value="gender_female"
-              name="gender"
-            />
-            <label for="gender_female">Feminino</label>
-          </div>
-
-          <div class="input-radio">
-            <input type="radio" id="other" value="other" name="gender" />
-            <label for="other">Outro</label>
-          </div>
-
-          <input type="tel" placeholder="Telefone" id="tel-input" />
-
-          <button type="submit">Adcionar</button>
-        </form>
-
-        <form class="form-container form-disable" id="veiculo-form">
-          <p class="title">Contrato veiculo</p>
-          <input type="text" placeholder="Email" id="client-email" />
-          <input type="text" placeholder="CPF" id="client-cpf" />
-          <p class="gender">Gênero</p>
-
-          <div class="input-radio">
-            <input
-              type="radio"
-              id="gender_male"
-              value="gender_male"
-              name="gender"
-            />
-            <label for="gender_male">Masculino</label>
-          </div>
-
-          <div class="input-radio">
-            <input
-              type="radio"
-              id="gender_female"
-              value="gender_female"
-              name="gender"
-            />
-            <label for="gender_female">Feminino</label>
-          </div>
-
-          <div class="input-radio">
-            <input type="radio" id="other" value="other" name="gender" />
-            <label for="other">Outro</label>
-          </div>
-
-          <input type="tel" placeholder="Telefone" id="tel-input" />
-
-          <button type="submit">Adcionar</button>
-        </form>
       </aside>
       <section id="main-section">
         <div id="lists-container" class="lists-container">

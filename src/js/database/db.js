@@ -12,6 +12,18 @@ class Db {
       },
     ];
     this.vendedorList = [];
+
+    this.sales = []
+  }
+
+  addNewSale(sale){
+    let newSale = {
+      vendedor : sale.vendedor,
+      contrato : this.sales.contrato
+    }
+
+    oldSalesList = this.sales
+    this.sales = oldSalesList.concat(newSale)
   }
 
   addCliente(client) {
