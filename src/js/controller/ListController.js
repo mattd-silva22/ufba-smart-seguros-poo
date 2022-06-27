@@ -1,8 +1,9 @@
 class ListController {
-  constructor() {
+  constructor(database) {
     this.ClientListEl = document.querySelector(".lista-cliente");
     this.SalerListEl = document.querySelector(".lista-vendedores");
     this.ContratoListEl = document.querySelector(".lista-contratos");
+    this.db = database;
   }
 
   addClient(client) {
@@ -69,12 +70,14 @@ class ListController {
     const button = document.querySelector(`#delete-contrato-${contrato.id}`);
     button.addEventListener("click", () => {
       this.removeContrato(contrato);
+      this.db.removeContrato(contrato)
     });
   };
 
   removeClient = (client) => {
     let divEl = document.getElementById("div-cliente" + client.cpf);
     this.ClientListEl.removeChild(divEl);
+    this.removeClientData(client)
   };
 
   removeVendedor = (vendedor) => {

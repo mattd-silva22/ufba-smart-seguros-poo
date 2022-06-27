@@ -1,6 +1,6 @@
 let database = new Db();
 let formView = new FormView();
-let listController = new ListController();
+let listController = new ListController(database);
 let clienteController = new ClienteController(
   "#client-form",
   "#client-name",

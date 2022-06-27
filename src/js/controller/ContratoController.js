@@ -50,6 +50,7 @@ class ContratoCelularController {
       );
 
       this.addContratoToList(contrato);
+      this.database.addContrato(contrato)
 
       this.clearForm();
     });

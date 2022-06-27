@@ -3,6 +3,7 @@ class Db {
     this.clientList = [];
     this.vendedorList = [];
     this.salesList = [];
+    this.contratoList = []
   }
 
   addNewSale(sale) {
@@ -52,5 +53,20 @@ class Db {
 
   getSalesListLength() {
     return this.salesList.length;
+  }
+
+  addContrato(contrato) {
+    let newlist = this.contratoList.concat(contrato);
+    this.contratoList = newlist;
+  }
+
+  removeContrato(contrato) {
+    console.log(this.contratoList)
+    let oldList = this.contratoList
+    let newlist = oldList.filter( item => item != contrato)
+    this.contratoList = newlist;
+    console.log(this.contratoList)
+ 
+
   }
 }
