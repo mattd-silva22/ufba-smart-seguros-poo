@@ -22,3 +22,14 @@ let vendedorController = new VendedorController(
   database,
   listController
 );
+
+let contratoController = new ContratoCelularController(
+  "#contrato-form",
+  "#vendedor-sale",
+  "#cliente-sale",
+  "#tipo",
+  "#valor-sale",
+  "#total-sale",
+  database,
+  listController, 
+);

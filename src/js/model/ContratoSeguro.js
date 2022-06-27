@@ -1,27 +1,21 @@
 class ContratoSeguro {
-  constructor(
-    nomeCliente,
-    cpfCliente,
-    nomeVendedor,
-    codVendedor,
-    item,
-    valorContrato
-  ) {
+  constructor(id, nomeCliente, nomeVendedor, codVendedor, item, valorContrato) {
+    this.id = id;
     this._nomeCliente = nomeCliente;
-    this._cpfCliente = cpfCliente;
     this._nomeVendedor = nomeVendedor;
     this._codVendedor = codVendedor;
     this._item = item;
     this._valorContrato = valorContrato;
+    this._dataContrato = getTodayDate();
   }
 
   //getters
-  get nomeCliente() {
-    return this._nomeCliente;
+  get id() {
+    return this._id;
   }
 
-  get cpfCliente() {
-    return this._cpfCliente;
+  get nomeCliente() {
+    return this._nomeCliente;
   }
 
   get nomeVendedor() {
@@ -40,13 +34,17 @@ class ContratoSeguro {
     return this._valorContrato;
   }
 
-  //setters
-  set nomeCliente(value) {
-    this._nomeCliente = value;
+  get dataContrato() {
+    return this._dataContrato;
   }
 
-  set cpfCliente(value) {
-    this._cpfCliente = value;
+  //setters
+  set id(value) {
+    this._id = value;
+  }
+
+  set nomeCliente(value) {
+    this._nomeCliente = value;
   }
 
   set nomeVendedor(value) {
@@ -64,4 +62,17 @@ class ContratoSeguro {
   set valorContrato(value) {
     this._valorContrato = value;
   }
+}
+
+function getTodayDate() {
+  const date = new Date();
+  const today =
+    date.getDate() +
+    "/" +
+    (date.getMonth() + 1 > 9
+      ? date.getMonth() + 1
+      : "0" + (date.getMonth() + 1)) +
+    "/" +
+    date.getFullYear();
+  return today;
 }

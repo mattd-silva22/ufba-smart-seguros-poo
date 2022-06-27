@@ -1,47 +1,45 @@
 class Db {
   constructor() {
-    this.clientList = [
-      {
-        name: "Guto Marcelo",
-        email: "guto.marcelo@email.com",
-        cpf: "12365498717",
-        tel: "d",
-        gender: "m",
-        dataRegistro: "21/09/2022",
-        userType: "client",
-      },
-    ];
+    this.clientList = [];
     this.vendedorList = [];
-
-    this.sales = []
+    this.salesList = [];
   }
 
-  addNewSale(sale){
+  addNewSale(sale) {
     let newSale = {
-      vendedor : sale.vendedor,
-      contrato : this.sales.contrato
-    }
+      vendedor: sale.nomeVendedor,
+      contrato: 1,
+    };
 
-    oldSalesList = this.sales
-    this.sales = oldSalesList.concat(newSale)
+    let newList = this.salesList.concat(newSale);
+    this.salesList = newList;
+
+    document.getElementById("total-sales").innerHTML = this.salesList.length;
+  }
+
+  removeSale(sale) {
+    let newlist = this.salesList.filter((item) => item !== sale);
+    this.salesList = newlist;
   }
 
   addCliente(client) {
     let newlist = this.clientList.concat(client);
     this.clientList = newlist;
-    console.log(this.clientList);
   }
 
   removeCliente(client) {
     let newlist = this.clientList.filter((item) => item !== client);
     this.clientList = newlist;
-    console.log(this.clientList);
   }
 
   addVendedor(vendedor) {
     let newlist = this.vendedorList.concat(vendedor);
     this.vendedorList = newlist;
-    console.log(this.vendedorList);
+  }
+
+  removeVendedor(vendedor) {
+    let newlist = this.vendedorList.filter((item) => item !== vendedor);
+    this.vendedorList = newlist;
   }
 
   getVendedorList() {
@@ -50,5 +48,9 @@ class Db {
 
   getClientList() {
     return this.clientList;
+  }
+
+  getSalesListLength() {
+    return this.salesList.length;
   }
 }
