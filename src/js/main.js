@@ -6,7 +6,6 @@ let clienteController = new ClienteController(
   "#client-name",
   "#client-email",
   "#client-cpf",
-  "#gender",
   "#tel-input",
   database,
   listController
@@ -17,13 +16,12 @@ let vendedorController = new VendedorController(
   "#vendedorName",
   "#vendedorEmail",
   "#codigoVendedor",
-  "#gender",
   "#vendedorTelefone",
   database,
   listController
 );
 
-let contratoController = new ContratoCelularController(
+let contratoController = new ContratoController(
   "#contrato-form",
   "#vendedor-sale",
   "#cliente-sale",

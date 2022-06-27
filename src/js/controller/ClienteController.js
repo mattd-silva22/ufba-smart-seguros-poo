@@ -4,7 +4,6 @@ class ClienteController {
     clientNameInputId,
     clientEmailInputId,
     clientCpfInputId,
-    clientGenderId,
     clientTelInputId,
     database,
     listController
@@ -13,7 +12,6 @@ class ClienteController {
     this.clientNameInputEl = document.querySelector(clientNameInputId);
     this.clientEmailInputEl = document.querySelector(clientEmailInputId);
     this.clientCpfInputEl = document.querySelector(clientCpfInputId);
-    this.clientGenderInputEl = document.querySelector(clientGenderId);
     this.clientTelInputEl = document.querySelector(clientTelInputId);
     this.database = database;
     this.listController = listController;
@@ -29,13 +27,12 @@ class ClienteController {
       let emailInput = this.clientEmailInputEl.value;
       let cpfInput = this.clientCpfInputEl.value;
       let telInput = this.clientTelInputEl.value;
-      let genderInput = "";
 
-      /* if (checkBlankFields([nameInput, emailInput, cpfInput, telInput])) {
+      if (checkBlankFields([nameInput, emailInput, cpfInput, telInput])) {
         alert("Favor,não deixar campos em branco");
         return;
       }
-
+      /*
       if (!validateCPF(cpfInput)) {
         alert("CPF invalido");
         return;
@@ -60,14 +57,12 @@ class ClienteController {
         email: this.clientEmailInputEl.value,
         cpf: this.clientCpfInputEl.value,
         tel: this.clientTelInputEl.value,
-        gender: genderInput,
         dataRegistro: today,
         userType: "client",
       };
 
       let client = new Cliente(
         clientData.name,
-        clientData.gender,
         clientData.email,
         clientData.dataRegistro,
         clientData.userType,

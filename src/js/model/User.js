@@ -1,7 +1,6 @@
 class User {
-  constructor(nome, genero, email, dataRegistro, tipo) {
+  constructor(nome, email, dataRegistro, tipo) {
     this._nomeUsuario = nome;
-    this._generoUsuario = genero;
     this._emailUsuario = email;
     this._dataRegistroUsuario = dataRegistro;
     this._tipoUsuario = tipo;
@@ -10,10 +9,6 @@ class User {
   //getters
   get nomeUsuario() {
     return this._nomeUsuario;
-  }
-
-  get generoUsuario() {
-    return this._generoUsuario;
   }
 
   get emailUsuario() {
@@ -32,10 +27,6 @@ class User {
 
   set nomeUsuario(value) {
     this._nomeUsuario = value;
-  }
-
-  set generoUsuario(value) {
-    this._generoUsuario = value;
   }
 
   set emailUsuario(value) {
