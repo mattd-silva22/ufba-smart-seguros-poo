@@ -1,6 +1,6 @@
 class Vendedor extends User {
-  constructor(nome, genero, email, dataRegistro, tipo, codVendedor, telefone) {
-    super(nome, genero, email, dataRegistro, tipo);
+  constructor(nome, email, dataRegistro, tipo, codVendedor, telefone) {
+    super(nome, email, dataRegistro, tipo);
     this._codigoVendedor = codVendedor;
     this._telefone = telefone;
   }

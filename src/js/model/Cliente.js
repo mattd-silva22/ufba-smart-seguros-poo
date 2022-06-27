@@ -1,16 +1,12 @@
 class Cliente extends User {
-  constructor(nome, genero, email, dataRegistro, tipo, cpf, telefone) {
-    super(nome, genero, email, dataRegistro, tipo);
+  constructor(nome, email, dataRegistro, tipo, cpf, telefone) {
+    super(nome, email, dataRegistro, tipo);
     this._cpf = cpf;
     this.telefone = telefone;
   }
 
   get nome() {
     return this._nome;
-  }
-
-  get genero() {
-    return this._genero;
   }
 
   get email() {
@@ -35,10 +31,6 @@ class Cliente extends User {
 
   set nome(value) {
     this._nome = value;
-  }
-
-  set genero(value) {
-    this._genero = value;
   }
 
   set email(value) {
