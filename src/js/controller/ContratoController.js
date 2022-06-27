@@ -3,7 +3,6 @@ class ContratoCelularController {
     salesFormId,
     vendedorName,
     clienteSale,
-    tipo,
     valor,
     totalVendas,
     database,
@@ -12,7 +11,6 @@ class ContratoCelularController {
     this.salesFormEl = document.querySelector(salesFormId);
     this.vendedorNameInputEl = document.querySelector(vendedorName);
     this.clienteSaleInputEl = document.querySelector(clienteSale);
-    this.tipoInputEl = document.querySelector(tipo);
     this.valorInputEl = document.querySelector(valor);
     this.totalVendasEl = document.querySelector(totalVendas);
     this.database = database;
@@ -27,7 +25,7 @@ class ContratoCelularController {
 
       let vendedorNameInput = this.vendedorNameInputEl.value;
       let clienteSaleInput = this.clienteSaleInputEl.value;
-      let tipoInput = "teste";
+      let tipoInput = this.tipoInputEl;
       let valorInput = this.valorInputEl.value;
 
       if (
@@ -47,7 +45,6 @@ class ContratoCelularController {
         nomeCliente: this.clienteSaleInputEl.value,
         nomeVendedor: this.vendedorNameInputEl.value,
         codVendedor: 1,
-        item: "teste",
         valorContrato: this.valorInputEl.value,
       };
 
@@ -56,7 +53,7 @@ class ContratoCelularController {
         contratoData.nomeCliente,
         contratoData.nomeVendedor,
         contratoData.codVendedor,
-        contratoData.item,
+        getSelectedType(),
         contratoData.valorContrato
       );
 
@@ -88,4 +85,12 @@ class ContratoVeiculo {
 
 function checkBlankFields(fields) {
   return fields.some((field) => field.trim() === "");
+}
+
+function getSelectedType() {
+  return document.querySelector("#veiculo").checked
+    ? "Veículo"
+    : document.querySelector("#imovel").checked
+    ? "Imóvel"
+    : "Celular";
 }
