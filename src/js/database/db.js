@@ -2,25 +2,7 @@ class Db {
   constructor() {
     this.clientList = [];
     this.vendedorList = [];
-    this.salesList = [];
-    this.contratoList = []
-  }
-
-  addNewSale(sale) {
-    let newSale = {
-      vendedor: sale.nomeVendedor,
-      contrato: 1,
-    };
-
-    let newList = this.salesList.concat(newSale);
-    this.salesList = newList;
-
-    document.getElementById("total-sales").innerHTML = this.salesList.length;
-  }
-
-  removeSale(sale) {
-    let newlist = this.salesList.filter((item) => item !== sale);
-    this.salesList = newlist;
+    this.contratoList = [];
   }
 
   addCliente(client) {
@@ -51,22 +33,22 @@ class Db {
     return this.clientList;
   }
 
-  getSalesListLength() {
-    return this.salesList.length;
-  }
-
   addContrato(contrato) {
     let newlist = this.contratoList.concat(contrato);
     this.contratoList = newlist;
+    document.getElementById("total-sales").innerHTML =
+      this.getContratoListLength();
+  }
+
+  getContratoListLength() {
+    return this.contratoList.length;
   }
 
   removeContrato(contrato) {
-    console.log(this.contratoList)
-    let oldList = this.contratoList
-    let newlist = oldList.filter( item => item != contrato)
+    let oldList = this.contratoList;
+    let newlist = oldList.filter((item) => item != contrato);
     this.contratoList = newlist;
-    console.log(this.contratoList)
- 
-
+    document.getElementById("total-sales").innerHTML =
+      this.getContratoListLength();
   }
 }
