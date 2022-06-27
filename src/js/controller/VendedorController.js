@@ -4,7 +4,6 @@ class VendedorController {
     vendedorName,
     vendedorEmail,
     codigoVendedor,
-    vendedorGenderId,
     vendedorTelefone,
     database,
     listController
@@ -13,7 +12,6 @@ class VendedorController {
     this.vendedorNameInputEl = document.querySelector(vendedorName);
     this.vendedorEmailInputEl = document.querySelector(vendedorEmail);
     this.codigoVendedorInputEl = document.querySelector(codigoVendedor);
-    this.vendedorGenderInputEl = document.querySelector(vendedorGenderId);
     this.vendedorTelInputEl = document.querySelector(vendedorTelefone);
     this.database = database;
     this.listController = listController;
@@ -29,7 +27,6 @@ class VendedorController {
       let emailInput = this.vendedorEmailInputEl.value;
       let codigoInput = this.codigoVendedorInputEl.value;
       let telInput = this.vendedorTelInputEl.value;
-      let genderInput = "";
 
       if (checkBlankFields([nameInput, emailInput, telInput, codigoInput])) {
         alert("Favor,não deixar campos em branco");
@@ -55,14 +52,12 @@ class VendedorController {
         email: this.vendedorEmailInputEl.value,
         codigo: this.codigoVendedorInputEl.value,
         tel: this.vendedorTelInputEl.value,
-        gender: "m",
         dataRegistro: today,
         userType: "vendedor",
       };
 
       let vendedor = new Vendedor(
         vendedorData.name,
-        vendedorData.gender,
         vendedorData.email,
         vendedorData.dataRegistro,
         vendedorData.userType,
@@ -84,7 +79,6 @@ class VendedorController {
   clearForm() {
     this.vendedorNameInputEl.value = "";
     this.vendedorEmailInputEl.value = "";
-    this.codigoVendedorInputEl.value = "";
     this.codigoVendedorInputEl.value = "";
     this.vendedorTelInputEl.value = "";
   }

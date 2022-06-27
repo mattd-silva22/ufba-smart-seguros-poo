@@ -6,7 +6,6 @@ let clienteController = new ClienteController(
   "#client-name",
   "#client-email",
   "#client-cpf",
-  "#gender",
   "#tel-input",
   database,
   listController
@@ -17,7 +16,6 @@ let vendedorController = new VendedorController(
   "#vendedorName",
   "#vendedorEmail",
   "#codigoVendedor",
-  "#gender",
   "#vendedorTelefone",
   database,
   listController
