@@ -57,7 +57,7 @@ main {
 aside {
   width: 40%;
   background-color: var(--color-blue);
-  height: calc(200vh - 100px);
+  height: calc(100vh - 100px);
 }
 
 .aside-label-container {
@@ -83,6 +83,18 @@ aside {
   padding: 9%;
   gap: 10px;
   color: var(--color-white);
+}
+
+.form-container button {
+  padding: 12px;
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+.gender {
+  font-size: 2rem !important;
 }
 
 .form-container .title {

@@ -57,8 +57,6 @@
               placeholder="Codigo Vendedor"
               id="codigoVendedor"
             />
-            
-
 
             <input type="tel" placeholder="Telefone" id="vendedorTelefone" />
             <button type="submit">Adicionar</button>
@@ -70,49 +68,37 @@
           <input type="text" placeholder="Nome" id="client-name" />
           <input type="text" placeholder="Email" id="client-email" />
           <input type="text" placeholder="CPF" id="client-cpf" />
-        
 
           <input type="tel" placeholder="Telefone" id="tel-input" />
 
-          <button type="submit">Adcionar</button>
+          <button type="submit">Adicionar</button>
         </form>
 
-        <form class="form-container form-disable" id="imovel-form">
+        <form class="form-container form-disable" id="contrato-form">
           <p class="title">Contrato Seguro</p>
           <input type="text" placeholder="Nome Vendedor" id="vendedor-sale" />
           <input type="text" placeholder="Nome Cliente" id="cliente-sale" />
           <p class="gender">Tipo</p>
 
           <div class="input-radio">
-            <input
-              type="radio"
-              id="gender_male"
-              value="gender_male"
-              name="gender"
-            />
-            <label for="gender_male">Veiculo</label>
+            <input type="radio" id="veiculo" value="veiculo" name="tipo" />
+            <label for="veiculo">Veiculo</label>
           </div>
 
           <div class="input-radio">
-            <input
-              type="radio"
-              id="gender_female"
-              value="gender_female"
-              name="gender"
-            />
-            <label for="gender_female">Imovel</label>
+            <input type="radio" id="imovel" value="imovel" name="tipo" />
+            <label for="imovel">Imovel</label>
           </div>
 
           <div class="input-radio">
-            <input type="radio" id="other" value="other" name="gender" />
-            <label for="other">Celular</label>
+            <input type="radio" id="celular" value="celular" name="tipo" />
+            <label for="celular">Celular</label>
           </div>
 
-          <input type="text" placeholder="Valor Item" id="cliente-sale" />
+          <input type="text" placeholder="Valor Item" id="valor-sale" />
 
-          <button type="submit">Adcionar</button>
+          <button type="submit">Adicionar</button>
         </form>
-
       </aside>
       <section id="main-section">
         <div id="lists-container" class="lists-container">
@@ -124,7 +110,7 @@
                 <p>Nome</p>
                 <p>Email</p>
                 <p>Telefone</p>
-                <p>Ações</p>
+                <p></p>
               </div>
               <div class="list-table-body lista-cliente" id="list-table-body">
                 <div class="list-table-row">
@@ -133,7 +119,7 @@
                   <p>fulano@smart.com.br</p>
                   <p>(71) 99999-0000</p>
                   <p class="list-actions">
-                    <button class="edit-button">Editar</button>
+                    <!-- <button class="edit-button">Editar</button> -->
                     <button>Excluir</button>
                   </p>
                 </div>
@@ -149,7 +135,7 @@
                 <p>Nome</p>
                 <p>Email</p>
                 <p>Vendas</p>
-                <p>Ações</p>
+                <p></p>
               </div>
               <div
                 class="list-table-body lista-vendedores"
@@ -161,7 +147,7 @@
                   <p>fulano@smart.com.br</p>
                   <p>5</p>
                   <p class="list-actions">
-                    <button class="edit-button">Editar</button>
+                    <!-- <button class="edit-button">Editar</button> -->
                     <button>Excluir</button>
                   </p>
                 </div>
@@ -182,7 +168,7 @@
                 <p>Data</p>
                 <p></p>
               </div>
-              <div class="list-table-body" id="list-table-body">
+              <div class="list-table-body lista-contratos" id="list-table-body">
                 <div class="list-table-row">
                   <p>321</p>
                   <p>Fulano</p>
@@ -200,13 +186,15 @@
         </div>
       </section>
     </main>
+    <script src="./src/js/view/FormView.js"></script>
     <script src="./src/js/database/db.js"></script>
     <script src="./src/js/model/User.js"></script>
     <script src="./src/js/model/Cliente.js"></script>
     <script src="./src/js/model/Vendedor.js"></script>
-    <script src="./src/js/view/FormView.js"></script>
+    <script src="./src/js/model/ContratoSeguro.js"></script>
     <script src="./src/js/controller/ClienteController.js"></script>
     <script src="./src/js/controller/VendedorController.js"></script>
+    <script src="./src/js/controller/ContratoController.js"></script>
     <script src="./src/js/controller/ListController.js"></script>
     <script src="./src/js/main.js"></script>
   </body>

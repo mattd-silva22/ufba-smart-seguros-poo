@@ -9,15 +9,9 @@ class FormView {
 
     this.clientFormEl = document.querySelector("#client-form");
     this.salesFormEl = document.querySelector("#sales-form");
-    this.seguroFormEl = document.querySelector("#imovel-form");
+    this.seguroFormEl = document.querySelector("#contrato-form");
 
-
-    this.formLabels = [
-      "Vendedores",
-      "Clientes",
-      "Seguro",
-
-    ];
+    this.formLabels = ["Vendedores", "Clientes", "Seguro"];
 
     this.populateAside();
   }
@@ -27,23 +21,19 @@ class FormView {
       this.salesFormEl.classList.remove("form-disable");
       this.clientFormEl.classList.add("form-disable");
       this.seguroFormEl.classList.add("form-disable");
-
     }
 
     if (label === "Clientes") {
       this.clientFormEl.classList.remove("form-disable");
       this.salesFormEl.classList.add("form-disable");
       this.seguroFormEl.classList.add("form-disable");
-
     }
 
     if (label === "Seguro") {
       this.seguroFormEl.classList.remove("form-disable");
       this.salesFormEl.classList.add("form-disable");
       this.clientFormEl.classList.add("form-disable");
-
     }
-
   }
 
   populateAside() {
