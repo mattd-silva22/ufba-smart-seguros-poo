@@ -21,7 +21,7 @@ let vendedorController = new VendedorController(
   listController
 );
 
-let contratoController = new ContratoCelularController(
+let contratoController = new ContratoController(
   "#contrato-form",
   "#vendedor-sale",
   "#cliente-sale",

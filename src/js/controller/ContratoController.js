@@ -1,4 +1,4 @@
-class ContratoCelularController {
+class ContratoController {
   constructor(
     salesFormId,
     vendedorName,
@@ -65,14 +65,6 @@ class ContratoCelularController {
     this.clienteSaleInputEl.value = "";
     this.valorInputEl.value = "";
   }
-}
-
-class ContratoImovel {
-  constructor() {}
-}
-
-class ContratoVeiculo {
-  constructor() {}
 }
 
 function checkBlankFields(fields) {
