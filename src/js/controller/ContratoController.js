@@ -33,7 +33,7 @@ class ContratoController {
       }
 
       let contratoData = {
-        id: this.database.getSalesListLength() + 1,
+        id: this.database.getContratoListLength() + 1,
         nomeCliente: this.clienteSaleInputEl.value,
         nomeVendedor: this.vendedorNameInputEl.value,
         codVendedor: 1,
@@ -50,14 +50,13 @@ class ContratoController {
       );
 
       this.addContratoToList(contrato);
-      this.database.addContrato(contrato)
 
       this.clearForm();
     });
   }
 
   addContratoToList(contrato) {
-    this.database.addNewSale(contrato);
+    this.database.addContrato(contrato);
     this.listController.addContrato(contrato);
   }
 
