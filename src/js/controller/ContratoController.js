@@ -25,17 +25,9 @@ class ContratoCelularController {
 
       let vendedorNameInput = this.vendedorNameInputEl.value;
       let clienteSaleInput = this.clienteSaleInputEl.value;
-      let tipoInput = this.tipoInputEl;
       let valorInput = this.valorInputEl.value;
 
-      if (
-        checkBlankFields([
-          vendedorNameInput,
-          clienteSaleInput,
-          tipoInput,
-          valorInput,
-        ])
-      ) {
+      if (checkBlankFields([vendedorNameInput, clienteSaleInput, valorInput])) {
         alert("Favor não deixar campos em branco");
         return;
       }
